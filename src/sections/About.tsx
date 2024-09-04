@@ -146,7 +146,7 @@ export const AboutSection = () => {
                     return (
                       <Fragment key={hobby.title}>
                         <motion.div
-                          className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute"
+                          className="inline-flex items-center gap-2 px-6 py-1.5 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full absolute cursor-pointer"
                           style={{ left: hobby.left, top: hobby.top }}
                           drag
                           dragConstraints={constraintRef}
