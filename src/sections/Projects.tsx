@@ -49,7 +49,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24 scroll-mt-8" id="projects">
       <div>
         <div className="container">
           <SectionHeader
