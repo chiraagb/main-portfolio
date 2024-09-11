@@ -1,16 +1,19 @@
-import memojiImage from "@/assets/images/memoji-computer.png";
+"use client";
+import memojiImage from "@/assets/images/a-hacker-with-a-laptop-and-a-dashing-hoodie.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import HeroOrbit from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import Typewriter from "typewriter-effect";
+import { BsArrow90DegRight } from "react-icons/bs";
 
 export const HeroSection = () => {
   return (
     <>
       <div
-        className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
+        className="py-32 md:py-48 lg:py-48 relative z-0 overflow-x-clip"
         id="home"
       >
         <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
@@ -123,28 +126,50 @@ export const HeroSection = () => {
                 <div className="absolute inset-0 rounded-full bg-green-500 animate-ping-large"></div>
               </div>
               <div className="text-sm font-medium">
-                Available for new projects
+                Available for building exceptional user experience
               </div>
             </div>
           </div>
           <div className="max-w-lg mx-auto">
-            <h1 className="font-calistoga text-3xl md:text-5xl text-center mt-8 tracking-wide">
-              Building Exceptional User Experiences
+            <h1 className="font-calistoga text-3xl md:text-4xl text-center mt-8 tracking-wider">
+              Ahoy! I&apos;m <span className="text-green-500">Chirag B.</span>
             </h1>
-            <p className="mt-4 text-center text-white/60 md:text-lg">
-              I specialize in transforming designs into functional,
-              high-performing web applications. Let's discuss your next project.
+            <p className="mt-4 text-center text-white/60 md:text-lg  gap-2 w-full">
+              I am dedicated in building exceptional digital solutions using
+              cutting-edge web technologies, focusing on:
+              <Typewriter
+                options={{
+                  strings: [
+                    '<span style="color: #F5F5F5;font-size:18px">innovative web applications.</span>',
+                    '<span style="color: #C7FFD8;font-size:18px">scalable and responsive interfaces.</span>',
+                    '<span style="color: #FEF9D9;font-size:18px">secure and efficient backend systems.</span>',
+                    '<span style="color: #D7C3F1;font-size:18px">optimized data management solutions.</span>',
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 50,
+                  deleteSpeed: 50,
+                }}
+              />
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-              <span className="font-semibold">Explore My Work</span>
-              <ArrowDown className="size-4" />
-            </button>
-            <button className="inline-flex items-center gap-3 border border-white bg-white text-gray-900 h-12 leading-[90px] px-6 rounded-xl">
+            <a
+              href="/Chirag_Bhandakkar_Resume.pdf"
+              download="Chirag_Bhandakkar_Resume.pdf"
+              className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-20 cursor-pointer"
+            >
+              <span className="font-semibold">Hire Me &lt;/&gt;</span>
+              {/* <BsArrow90DegRight className="size-4" /> */}
+            </a>
+            <a
+              href="https://www.linkedin.com/in/chiraagb/"
+              target="_blank"
+              className="inline-flex items-center gap-3 border border-white bg-white text-gray-900 h-12 leading-[90px] px-6 rounded-xl cursor-pointer z-20"
+            >
               <span>👋</span>
               <span className="font-semibold">Let's Connect</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

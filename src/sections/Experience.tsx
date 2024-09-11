@@ -13,7 +13,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function Experience() {
   return (
-    <section id="experience" className="">
+    <section id="experience" className="scroll-mt-28">
       <div className="container">
         <SectionHeader
           title="My Experience"
@@ -21,7 +21,10 @@ export default function Experience() {
           description="See what I've been up to in the past few years."
         />
         <div className="mt-16">
-          <VerticalTimeline lineColor="#9ca3af">
+          <VerticalTimeline
+            lineColor="#9ca3af"
+            className="lg:before:!h-[105%] sm:before:!h-[110%] md:before:!h-[104%]"
+          >
             {experiencesData?.map((item, index) => {
               const { ref, inView } = useInView({
                 threshold: 0,
@@ -30,7 +33,7 @@ export default function Experience() {
                 <div
                   key={index}
                   ref={ref}
-                  className="relative vertical-timeline-element"
+                  className="relative vertical-timeline-element sm:!mb-16"
                 >
                   <VerticalTimelineElement
                     contentStyle={{

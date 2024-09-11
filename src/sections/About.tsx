@@ -5,14 +5,33 @@ import Card from "@/components/Card";
 import StarIcon from "@/assets/icons/star.svg";
 import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
-import JavaScriptIcon from "@/assets/icons/square-js.svg";
-import HtmlIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GithubIcon from "@/assets/icons/github.svg";
-import TechIcon from "@/components/TechIcon";
-import mapImage from "@/assets/images/map.png";
+import JavaScriptIcon from "@/assets/programming-icons/javascript-original.svg";
+import HtmlIcon from "@/assets/programming-icons/html5-original.svg";
+import CssIcon from "@/assets/programming-icons/css3-original.svg";
+import ReactIcon from "@/assets/programming-icons/react-original.svg";
+import NextjsIcon from "@/assets/programming-icons/nextjs-icon-svgrepo-com.svg";
+import GithubIcon from "@/assets/programming-icons/github.svg";
+import PythonIcon from "@/assets/programming-icons/python-original.svg";
+import DockerIcon from "@/assets/programming-icons/docker-original.svg";
+import DjangoIcon from "@/assets/programming-icons/django-plain.svg";
+import DRFIcon from "@/assets/programming-icons/djangorest-original.svg";
+import PostmanIcon from "@/assets/programming-icons/postman-original.svg";
+import AWSIcon from "@/assets/programming-icons/amazonwebservices-original-wordmark.svg";
+import NPMIcon from "@/assets//programming-icons/npm-original-wordmark.svg";
+import FigmaIcon from "@/assets/programming-icons/figma-original.svg";
+import SwaggerIcon from "@/assets/programming-icons/swagger-original.svg";
+import TailwindIcon from "@/assets/programming-icons/tailwindcss-original.svg";
+import CplusplusIcon from "@/assets/programming-icons/cplusplus-original.svg";
+import MaterialuiIcon from "@/assets/programming-icons/materialui-original.svg";
+import PostgresqlIcon from "@/assets/programming-icons/postgresql-original.svg";
+import AppleIcon from "@/assets/programming-icons/apple-original.svg";
+import NodejsIcon from "@/assets/programming-icons/nodejs-original.svg";
+import BashIcon from "@/assets/programming-icons/bash-original.svg";
+import VscodeIcon from "@/assets/programming-icons/vscode-original.svg";
+import FramermotionIcon from "@/assets/programming-icons/framermotion-original.svg";
+import GitIcon from "@/assets/programming-icons/git-original.svg";
+import JiraIcon from "@/assets/programming-icons/jira-original.svg";
+import mapImage from "@/assets/images/india.jpg";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
@@ -25,24 +44,104 @@ const toolboxItems = [
     iconType: JavaScriptIcon,
   },
   {
+    title: "C++",
+    iconType: CplusplusIcon,
+  },
+  {
+    title: "Django",
+    iconType: DjangoIcon,
+  },
+  {
+    title: "Nodejs",
+    iconType: NodejsIcon,
+  },
+  {
+    title: "PostgreSQL",
+    iconType: PostgresqlIcon,
+  },
+  {
+    title: "MacOS",
+    iconType: AppleIcon,
+  },
+  {
+    title: "Django Rest Framework",
+    iconType: DRFIcon,
+  },
+  {
+    title: "Python",
+    iconType: PythonIcon,
+  },
+  {
     title: "HTML5",
     iconType: HtmlIcon,
+  },
+  {
+    title: "Jira",
+    iconType: JiraIcon,
+  },
+  {
+    title: "NPM",
+    iconType: NPMIcon,
   },
   {
     title: "CSS3",
     iconType: CssIcon,
   },
   {
-    title: "React",
+    title: "React.js",
     iconType: ReactIcon,
   },
   {
-    title: "Chrome",
-    iconType: ChromeIcon,
+    title: "VS Code",
+    iconType: VscodeIcon,
+  },
+  {
+    title: "Material UI",
+    iconType: MaterialuiIcon,
+  },
+  {
+    title: "Framer Motion",
+    iconType: FramermotionIcon,
+  },
+  {
+    title: "Next.js",
+    iconType: NextjsIcon,
+  },
+  {
+    title: "Git",
+    iconType: GitIcon,
+  },
+  {
+    title: "Swagger",
+    iconType: SwaggerIcon,
   },
   {
     title: "Github",
     iconType: GithubIcon,
+  },
+  {
+    title: "Docker",
+    iconType: DockerIcon,
+  },
+  {
+    title: "Tailwind CSS",
+    iconType: TailwindIcon,
+  },
+  {
+    title: "Postman",
+    iconType: PostmanIcon,
+  },
+  {
+    title: "AWS - EC2, S3, Route53, CloudFront, Amplify, ElasticIP",
+    iconType: AWSIcon,
+  },
+  {
+    title: "Figma",
+    iconType: FigmaIcon,
+  },
+  {
+    title: "Bash",
+    iconType: BashIcon,
   },
 ];
 
@@ -124,12 +223,12 @@ export const AboutSection = () => {
                 <ToolboxItems
                   items={toolboxItems}
                   className=""
-                  itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+                  itemsWrapperClassName="animate-move-left [animation-duration:90s]"
                 />
                 <ToolboxItems
                   items={toolboxItems}
                   className="mt-6"
-                  itemsWrapperClassName="animate-move-right [animation-duration:30s]"
+                  itemsWrapperClassName="animate-move-right [animation-duration:90s]"
                 />
               </Card>
             </div>

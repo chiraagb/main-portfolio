@@ -5,27 +5,35 @@ import { LuGraduationCap } from "react-icons/lu";
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "B.Tech in CSE",
+    location: "Indian Institute of Information Technology, Nagpur",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Graduated learning and building projects in DBMS,NLP,ML,OS,DSA,CN,Web Dev and more. Learned soft-skills and team-work. Acquired 8.11 CGPA and a remarkable experience in four years.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2020-2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "SDE Intern : RiDiv (Remote)",
+    location: "Noida, UP",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Worked mainly on the frontend side of various projects. Learned React/ Next.js, TailwindCSS and npm packages. Tested Backend API's through Postman. Started learning Django, PostgreSQL, Docker and AWS.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Mar 2024 - Jun 2024",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "SDE - I : RiDiv (Remote)",
+    location: "Noida, UP",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Learned more about Next.js and designing responsive web pages using TailwindCSS. Maintained deployed applications writted in Next.js and Django. Continued understanding of Django, PostgreSQL, Docker and AWS.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "Jun 2024 - August 2024",
+  },
+  {
+    title: "SDE - I : Aviara Labs (Remote)",
+    location: "Noida, UP",
+    description:
+      "Developed more robust and scalable application in Next.js & Django adhering to DRY principles. Worked on the application and continued learning more about frontend and backend technologies. ",
+    icon: React.createElement(FaReact),
+    date: "August 2024 - Present",
   },
 ] as const;

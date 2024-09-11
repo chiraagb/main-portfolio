@@ -22,19 +22,21 @@ export const ContactSection = () => {
                   Let&apos;s create something amazing together.
                 </h2>
                 <p className="text-sm mt-2 md:text-base">
-                  Whether you&apos;re diving into a new business venture,
-                  starting a creative endeavor, or just tackling a personal
-                  project, I&apos;m here to help you every step of the way.
-                  Let's brainstorm ideas, develop a plan, or solve any
-                  challenges you might be facing. What&apos;s your next project
-                  about?
+                  Ready to bring your vision to life? Whether it's a new
+                  business, creative project, or personal goal, I'm here to help
+                  you plan, strategize, and overcome challenges. What's your
+                  next project?
                 </p>
               </div>
               <div>
-                <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 mt-8 w-max border border-gray-950">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=chiraagbhandakkar@gmail.com"
+                  target="_blank" // Ensures that Gmail opens in a new tab
+                  className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 mt-8 w-max border border-gray-950"
+                >
                   <span className="font-semibold">Contact Me</span>
                   <ArrowUpRightIcon className="size-4" />
-                </button>
+                </a>
               </div>
             </div>
           </div>

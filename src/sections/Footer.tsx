@@ -2,20 +2,16 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 
 const footerLinks = [
   {
-    title: "Youtube",
-    url: "#",
+    title: "Github",
+    url: "https://github.com/chiraagb",
   },
   {
     title: "LinkedIn",
-    url: "#",
+    url: "https://www.linkedin.com/in/chiraagb/",
   },
   {
-    title: "Instagram",
-    url: "#",
-  },
-  {
-    title: "Twitter",
-    url: "#",
+    title: "Leetcode",
+    url: "https://leetcode.com/u/chiraagb/",
   },
 ];
 
