@@ -25,15 +25,15 @@ export const experiencesData = [
     location: "Noida, UP",
     description:
       "Learned more about Next.js and designing responsive web pages using TailwindCSS. Maintained deployed applications writted in Next.js and Django. Continued understanding of Django, PostgreSQL, Docker and AWS.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(CgWorkAlt),
     date: "Jun 2024 - August 2024",
   },
   {
     title: "SDE - I : Aviara Labs (Remote)",
     location: "Noida, UP",
     description:
-      "Developed more robust and scalable application in Next.js & Django adhering to DRY principles. Worked on the application and continued learning more about frontend and backend technologies. ",
-    icon: React.createElement(FaReact),
+      "Developed more robust and scalable application in Next.js & Django adhering to DRY principles. Worked on creating animations through tailwind and framer-motion and continued learning more about frontend and backend technologies. ",
+    icon: React.createElement(CgWorkAlt),
     date: "August 2024 - Present",
   },
 ] as const;

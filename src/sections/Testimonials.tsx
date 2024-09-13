@@ -1,101 +1,103 @@
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
-import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+"use client";
+
 import SectionHeader from "@/components/SectionHeader";
-import Image from "next/image";
-import grainImage from "@/assets/images/grain.jpg";
 import Card from "@/components/Card";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
+import axios from "axios";
+import { ArrowRight, Calendar, Clock, Tag } from "lucide-react";
 
-const testimonials = [
-  {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-    avatar: memojiAvatar1,
-  },
-  {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-    avatar: memojiAvatar2,
-  },
-  {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-    avatar: memojiAvatar3,
-  },
-  {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
-  },
-  {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-    avatar: memojiAvatar5,
-  },
-];
+export const MediumBlogPostsSection = () => {
+  const [mediumPosts, setMediumPosts] = useState<
+    {
+      title: string;
+      description: string;
+      pubDate: string;
+      author: string;
+      categories: string[];
+      link: string;
+    }[]
+  >([]);
 
-export const TestimonialsSection = () => {
+  useEffect(() => {
+    const fetchMediumData = async () => {
+      try {
+        const res = await axios.get(
+          `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@chiraagb`
+        );
+        console.log(res, "Medium data");
+        setMediumPosts(res.data.items);
+      } catch (error) {
+        console.error("Error in fetching medium data", error);
+      }
+    };
+    fetchMediumData();
+  }, []);
+
+  const stripHtml = (html: string) => {
+    const tmp = document.createElement("DIV");
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || "";
+  };
+
   return (
-    <>
-      <div className="py-16 lg:py-24">
-        <div className="container">
-          <SectionHeader
-            eyebrow="Happy Clients"
-            title="What Clients Say about Me"
-            description="Don't just take my word for it. See what my clients have to say about my work."
-          />
+    <div className="py-16 lg:py-24">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Insights & Learnings"
+          title="Latest Articles on Medium"
+          description="Explore a collection of my latest articles on the challenges I've solved and the lessons I've learned through building."
+        />
 
-          <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-            <div className="flex flex-none gap-8 pr-8 animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]">
-              {[...new Array(2)].fill(0).map((_, index) => {
-                return (
-                  <Fragment key={index}>
-                    {testimonials?.map((testimonial) => {
-                      return (
-                        <>
-                          <Card
-                            key={testimonial.name}
-                            className="max-w-xs md:p-8 md:max-w-md p-6 hover:-rotate-3 transition duration-300"
+        <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
+          <div className="relative flex flex-none gap-8 pr-8 animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
+            {[...new Array(2)].fill(0).map((_, index) => (
+              <Fragment key={index}>
+                {mediumPosts.map((post, index) => (
+                  <Card
+                    key={index}
+                    className="max-w-xs md:p-8 md:max-w-md p-6 hover:-rotate-3 transition duration-300 group"
+                  >
+                    <h3 className="text-xl font-semibold mb-4 overflow-clip truncate w-[200px]">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-white/70 mb-4 w-[200px] flex-1">
+                      {stripHtml(post.description).slice(0, 150)}...
+                    </p>
+                    <div className="flex flex-col gap-2 text-sm text-white/50">
+                      <div className="flex items-center">
+                        <Calendar size={16} className="mr-2" />
+                        {new Date(post.pubDate).toLocaleDateString()}
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1">
+                        <Tag size={16} className="mr-0" />
+                        {post.categories.map((category, idx) => (
+                          <span
+                            key={idx}
+                            className="bg-gray-700 px-2 py-1 rounded-full text-xs"
                           >
-                            <div className="flex gap-4 items-center">
-                              <div className="size-14 bg-gray-700 inline-flex rounded-full items-center justify-center flex-shrink-0  ">
-                                <Image
-                                  src={testimonial.avatar}
-                                  alt={testimonial.name}
-                                  className="max-h-full"
-                                />
-                              </div>
-                              <div>
-                                <div className="font-semibold">
-                                  {testimonial.name}
-                                </div>
-                                <div className="text-sm text-white/40">
-                                  {testimonial.position}
-                                </div>
-                              </div>
-                            </div>
-                            <p className="mt-4 text-sm md:text-base md:mt-6">
-                              {testimonial.text}
-                            </p>
-                          </Card>
-                        </>
-                      );
-                    })}
-                  </Fragment>
-                );
-              })}
-            </div>
+                            {category}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <a
+                      href={post.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/80 to-gray-700/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center p-6 backdrop-blur-sm"
+                    >
+                      <p className="text-white font-semibold flex items-center gap-2 hover:gap-3 transition-all duration-300">
+                        Read More
+                        <ArrowRight size={18} />
+                      </p>
+                    </a>
+                  </Card>
+                ))}
+              </Fragment>
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

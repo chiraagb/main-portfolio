@@ -1,6 +1,9 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import chatTcp from "@/assets/images/chatovertcp.jpg";
+import taskTracker from "@/assets/images/tasktracker.jpg";
+import stellarSites from "@/assets/images/stellarsites.jpg";
 import Image from "next/image";
 import CheckCircelIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -10,40 +13,40 @@ import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
+    company: "StellarSites",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "A real estate website built in MERN stack",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "added crud operation and login/signup feature using jwt" },
+      { title: "added search and filter options" },
+      { title: "added responsive ui" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://github.com/chiraagb/mern-real-estate",
+    image: stellarSites,
+  },
+  {
+    company: "ChatOverTCP",
+    year: "2023",
+    title: "A Multi-thread Chat application using TCP",
+    results: [
+      { title: "Features such as ban, kick and private messaging" },
+      { title: "Used python sockets" },
+      { title: "Threaded server-client communication" },
+    ],
+    link: "https://github.com/chiraagb/Chat-Room-using-TCP-IP--with-Tkinter-",
+    image: chatTcp,
+  },
+  {
+    company: "Task Tracker",
+    year: "2023",
+    title: "An application to manage your tasks",
+    results: [
+      { title: "added search and filtering options" },
+      { title: "added drag and drop feature to rearrange" },
+      { title: "implemented basic crud operations" },
+    ],
+    link: "https://github.com/chiraagb/task-tracker",
+    image: taskTracker,
   },
 ];
 
@@ -93,16 +96,16 @@ export const ProjectsSection = () => {
                         </ul>
                         <a href={project.link}>
                           <button className="bg-white text-gray-950 h-12 md:w-auto px-6 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                            <span>Visit Live Site</span>
+                            <span>Do not Click Here</span>
                             <ArrowUpRightIcon className="size-4" />
                           </button>
                         </a>
                       </div>
-                      <div className="lg:relative">
+                      <div className="lg:relative rounded-lg">
                         <Image
                           src={project.image}
                           alt={project.title}
-                          className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                          className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-tl-lg"
                         />
                       </div>
                     </div>

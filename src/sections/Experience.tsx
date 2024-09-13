@@ -17,13 +17,13 @@ export default function Experience() {
       <div className="container">
         <SectionHeader
           title="My Experience"
-          eyebrow="A big thanks to my past employers"
+          eyebrow="Crafting Efficient Code, One Line at a Time"
           description="See what I've been up to in the past few years."
         />
         <div className="mt-16">
           <VerticalTimeline
             lineColor="#9ca3af"
-            className="lg:before:!h-[105%] sm:before:!h-[110%] md:before:!h-[104%]"
+            className="lg:before:!h-[105%] sm:before:!h-[105%] md:before:!h-[108%]"
           >
             {experiencesData?.map((item, index) => {
               const { ref, inView } = useInView({

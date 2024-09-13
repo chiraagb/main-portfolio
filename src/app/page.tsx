@@ -10,7 +10,7 @@ import { HeroSection } from "@/sections/Hero";
 
 import { ProjectsSection } from "@/sections/Projects";
 import { TapeSection } from "@/sections/Tape";
-import { TestimonialsSection } from "@/sections/Testimonials";
+import { MediumBlogPostsSection } from "@/sections/Testimonials";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
       <ProjectsSection />
       <Experience />
       <TapeSection />
-      <TestimonialsSection />
+      <MediumBlogPostsSection />
       <AboutSection />
       <ContactSection />
       <Footer />
